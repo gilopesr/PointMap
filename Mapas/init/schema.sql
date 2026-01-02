@@ -1,0 +1,18 @@
+-- init/schema.sql
+CREATE DATABASE IF NOT EXISTS sistema_mapas;
+USE sistema_mapas;
+
+CREATE TABLE IF NOT EXISTS mapas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS pontos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    latitude DECIMAL(10, 8) NOT NULL,
+    longitude DECIMAL(11, 8) NOT NULL,
+    mapa_id INT,
+    FOREIGN KEY (mapa_id) REFERENCES mapas(id) ON DELETE CASCADE
+);

@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_mapas
+    restart: always
+    environment:
+      MYSQL_DATABASE: sistema_mapas
+      MYSQL_USER: giovana
+      MYSQL_PASSWORD: mapas
+      MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init:/docker-entrypoint-initdb.d 
+
+  backend:
+    build: ./backend
+    container_name: flask_api
+    ports:
+      - "5026:5026"
+    depends_on:
+      - db
+    environment:
+      - MYSQL_HOST=db
+
+  frontend:
+    build: . 
+    container_name: react_mapas
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  db_data:

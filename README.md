@@ -40,3 +40,6 @@ PointMap é uma aplicação interativa que permite aos usuários criar pontos de
    Backend (API): http://localhost:5026/api
    Documentação Swagger: http://localhost:5026/apidocs
 ```
+## IMAGENS
+<img width="1203" height="525" alt="image" src="https://github.com/user-attachments/assets/5f4cdb93-63b8-47a8-8fef-774f34e0b784" />
+

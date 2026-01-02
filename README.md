@@ -1,7 +1,7 @@
-# PointMap
+# 📍 PointMap 
 PointMap é uma aplicação interativa que permite aos usuários criar pontos de localização em mapas personalizados. Você pode criar diferentes mapas (ex: "Roteiro de Viagem", "Meus Restaurantes Favoritos") e cadastrar pontos clicando diretamente no mapa.
 
-## Tecnologias utilizadas
+## ⚙️Tecnologias utilizadas
 - Frontend: React.js, Vite, React Leaflet (OpenStreetMap), React Router
 - Backend: Python, Flask, Flasgger (Documentação Swagger)
 - Banco de Dados: MySQL
@@ -24,13 +24,19 @@ PointMap é uma aplicação interativa que permite aos usuários criar pontos de
 | **PUT** | `/api/pontos/<id>` | Edita o nome de um ponto | `{"nome": "string"}` |
 | **DELETE** | `/api/pontos/<id>` | Remove um ponto específico | - |
 
-## Para Executar o Projeto
-1. clone o repositorio
+## 📥 Para Executar o Projeto
+**1. clone o repositorio**
+```bash
   git clone https://github.com/seu-usuario/pointmap.git
   cd pointmap
-2. inicie o container
+```
+**2. inicie o container**
+```bash
    docker-compose up --build
-3. acesse os pointends
+```
+**3. acesse os endpoints**
+```bash
    Frontend: http://localhost:5173
    Backend (API): http://localhost:5026/api
    Documentação Swagger: http://localhost:5026/apidocs
+```

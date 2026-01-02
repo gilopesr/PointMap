@@ -28,7 +28,7 @@ PointMap é uma aplicação interativa que permite aos usuários criar pontos de
 **1. clone o repositorio**
 ```bash
   git clone https://github.com/seu-usuario/pointmap.git
-  cd pointmap
+  cd pointmap/mapas
 ```
 **2. inicie o container**
 ```bash
